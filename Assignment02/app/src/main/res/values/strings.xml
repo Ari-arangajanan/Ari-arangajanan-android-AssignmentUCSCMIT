@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Assignment02</string>
+    <string name="current_date_and_time">දැන් දිනය සහ වේලාව</string>
+    <string name="email">email\n</string>
+</resources>
