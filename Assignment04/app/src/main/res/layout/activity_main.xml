@@ -20,11 +20,13 @@
         app:titleTextColor="@android:color/white" />
 
     <ScrollView
-        android:layout_width="420dp"
-        android:layout_height="1004dp"
-        android:fillViewport="true"
-        app:layout_constraintBottom_toTopOf="@id/mainView"
-        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/mainView"
@@ -98,21 +100,34 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/number2" />
 
+            <!-- Add Button -->
+
+            <!-- Subtract Button -->
+
+            <TextView
+                android:id="@+id/answerVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:text="@string/answer"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/number2" />
+
             <View
                 android:id="@+id/line1"
                 android:layout_width="0dp"
                 android:layout_height="2dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="48dp"
                 android:layout_marginEnd="16dp"
                 android:background="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/answer" />
-
-            <!-- Add Button -->
-
-            <!-- Subtract Button -->
 
             <Button
                 android:id="@+id/addButton"
