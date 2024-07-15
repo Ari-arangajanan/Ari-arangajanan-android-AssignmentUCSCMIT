@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Assignment05</string>
+    <string name="password">Enter password</string>
+    <string name="register">Register</string>
+    <string name="user_name">Enter your user name</string>
+    <string name="todo">TODO</string>
+</resources>
