@@ -12,53 +12,41 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class memberMenu extends AppCompatActivity {
 
-    private Button button;
+    Button button;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_member_menu);
 
-        button = findViewById(R.id.btnRegister);
+        button = findViewById(R.id.btnmemberlogout);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                signup();
+                MainActivity();
             }
         });
 
-        button = findViewById(R.id.btnadminlogin);
+        button = findViewById(R.id.btnserachbook);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                adminLogin();
+                serachBooks();
             }
         });
 
-        button = findViewById(R.id.btnmemlogin);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                memberLogin();
-            }
-        });
     }
 
-    public void signup(){
-        Intent intent = new Intent(this, Signup.class);
+    public void MainActivity(){
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
-    public  void memberLogin(){
-        Intent intent = new Intent(this, Login.class);
-        startActivity(intent);
-    }
-
-    public  void adminLogin(){
-        Intent intent = new Intent(this, AdminLogin.class);
+    public void serachBooks(){
+        Intent intent = new Intent(this, SearchBooks.class);
         startActivity(intent);
     }
 }
