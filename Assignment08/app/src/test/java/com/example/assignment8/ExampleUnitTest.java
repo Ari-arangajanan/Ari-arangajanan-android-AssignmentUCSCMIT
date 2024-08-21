@@ -1,4 +1,4 @@
-package com.ucsc.assignment08;
+package com.example.assignment8;
 
 import org.junit.Test;
 

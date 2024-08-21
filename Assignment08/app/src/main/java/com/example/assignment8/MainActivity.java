@@ -1,27 +1,25 @@
-package com.ucsc.assignment08;
+package com.example.assignment8;
+
 
 import static android.content.ContentValues.TAG;
 
 import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
-import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
+import android.util.Log;
+import android.webkit.WebResourceError;
 
-import androidx.activity.EdgeToEdge;
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
     private WebView webView;
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -30,16 +28,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        webView = findViewById(R.id.webview);
+        webView = findViewById(R.id.web_view);
         webView.setWebViewClient(new MyWebViewClient());
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);
 
 
-        Button buttonLocal = findViewById(R.id.button_local);
+        Button buttonLocal = findViewById(R.id.btn_local);
         buttonLocal.setOnClickListener(v -> openLocalFile());
 
-        Button buttonUrl = findViewById(R.id.button_url);
+        Button buttonUrl = findViewById(R.id.btn_url);
         buttonUrl.setOnClickListener(v -> openUrlDialog());
 
         // Handle the back button press
@@ -108,3 +106,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+
