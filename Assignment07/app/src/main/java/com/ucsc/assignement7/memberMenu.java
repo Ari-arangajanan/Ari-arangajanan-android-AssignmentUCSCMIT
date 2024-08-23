@@ -6,11 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class memberMenu extends AppCompatActivity {
 
@@ -34,7 +30,7 @@ public class memberMenu extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                serachBooks();
+                searchBooks();
             }
         });
 
@@ -45,7 +41,7 @@ public class memberMenu extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void serachBooks(){
+    public void searchBooks(){
         Intent intent = new Intent(this, SearchBooks.class);
         startActivity(intent);
     }

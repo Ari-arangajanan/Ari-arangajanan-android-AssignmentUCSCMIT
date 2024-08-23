@@ -1,5 +1,6 @@
 package com.ucsc.assignement7;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,9 +21,10 @@ public class manageBooks extends AppCompatActivity {
     private DBManager dbManager;
 
     EditText editText1, editText2, editText3,editText4,editText5;
-    Button addbook;
+    Button addbook, searchbooks;
     Button clear;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,12 +43,20 @@ public class manageBooks extends AppCompatActivity {
         dbManager.open();
 
         addbook = findViewById(R.id.btnbookadd);
+        searchbooks = findViewById(R.id.btnBooksearch);
         clear =  findViewById(R.id.btndelete);
         editText1 =  findViewById(R.id.txtBookID);
         editText2 =  findViewById(R.id.txtBooktitle);
         editText3 = findViewById(R.id.txtpublishername);
         editText4 = findViewById(R.id.txtauthorname2);
         editText5 = findViewById(R.id.txtaddbranchname);
+
+        searchbooks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                searchBooks();
+            }
+        });
 
         addbook.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,6 +113,11 @@ public class manageBooks extends AppCompatActivity {
 
     public void adminMenu(){
         Intent intent = new Intent(this, adminMenu.class);
+        startActivity(intent);
+    }
+
+    public void searchBooks(){
+        Intent intent = new Intent(this, SearchBooks.class);
         startActivity(intent);
     }
 }

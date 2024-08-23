@@ -34,7 +34,10 @@ public class SearchBooks extends AppCompatActivity {
         setContentView(R.layout.activity_search_books);
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Search Books");
+        if (actionBar != null) {
+            actionBar.setTitle("Search Books");
+        }
+
 
         db = new DatabaseHelper(this);
         listItem = new ArrayList<>();

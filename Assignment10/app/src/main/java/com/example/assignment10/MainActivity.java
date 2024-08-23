@@ -79,8 +79,11 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         google_Map=googleMap;
-        LatLng currentLatLng = new LatLng(curr_loc.getLatitude(),curr_loc.getLongitude());
-        google_Map.addMarker(new MarkerOptions().position(currentLatLng).title("My Location"));
-        google_Map.moveCamera(CameraUpdateFactory.newLatLng(currentLatLng));
+        try{
+            LatLng currentLatLng = new LatLng(curr_loc.getLatitude(),curr_loc.getLongitude());
+            google_Map.addMarker(new MarkerOptions().position(currentLatLng).title("My Location"));
+            google_Map.moveCamera(CameraUpdateFactory.newLatLng(currentLatLng));
+        }catch (Exception e){}
+
     }
 }
