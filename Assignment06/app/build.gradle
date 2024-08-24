@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.ucsc.assignment06'
+    namespace 'com.example.assignment6'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.ucsc.assignment06"
+        applicationId "com.example.assignment6"
         minSdk 24
         targetSdk 34
         versionCode 1

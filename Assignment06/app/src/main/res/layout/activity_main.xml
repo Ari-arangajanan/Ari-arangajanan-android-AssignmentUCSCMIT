@@ -12,7 +12,7 @@
         android:id="@+id/btnCapture"
         android:layout_width="288dp"
         android:layout_height="50dp"
-        android:text="@string/take_a_picture"
+        android:text="TAKE A PICTURE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

@@ -1,4 +1,4 @@
-package com.ucsc.assignment06;
+package com.example.assignment6;
 
 import org.junit.Test;
 
